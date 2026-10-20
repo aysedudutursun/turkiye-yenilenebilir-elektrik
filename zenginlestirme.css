@@ -1,0 +1,52 @@
+/* Zenginleştirme katmanı: animasyonlar, illüstrasyonlar, sayaçlar.
+   Mevcut tasarımın renk değişkenlerini (--tr, --hidro, --ruzgar, --gunes) kullanır. */
+.ilerleme{position:fixed;top:0;left:0;right:0;height:4px;z-index:50;background:transparent}
+.ilerleme span{display:block;height:100%;background:linear-gradient(90deg,var(--hidro),var(--ruzgar),var(--gunes),var(--tr));transform:scaleX(0);transform-origin:left}
+
+/* Açılış: giriş animasyonu + hareketli sahne */
+.hero{position:relative;overflow:hidden}
+.hero-ic{position:relative;z-index:1}
+.hero h1,.hero .alt-baslik,.hero .kunye,.hero .hero-serit{animation:girisYukari .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .alt-baslik{animation-delay:.15s}.hero .kunye{animation-delay:.3s}.hero .hero-serit{animation-delay:.45s}
+@keyframes girisYukari{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero-sahne{position:absolute;right:-2%;top:6%;width:min(52vw,600px);opacity:.9;pointer-events:none;z-index:0}
+.hero-sahne svg{width:100%;height:auto;display:block}
+.pervane{animation:don 7s linear infinite;transform-origin:430px 120px}
+.pervane.kucuk{animation-duration:10s;transform-origin:520px 170px}
+.isinlar{animation:don 60s linear infinite;transform-origin:110px 80px}
+.gunes-nabiz{animation:nabiz 3.5s ease-in-out infinite;transform-origin:110px 80px}
+.dalga-a{animation:kay 9s linear infinite}.dalga-b{animation:kay 14s linear infinite reverse}
+@keyframes don{to{transform:rotate(360deg)}}
+@keyframes nabiz{50%{transform:scale(1.08)}}
+@keyframes kay{to{transform:translateX(-300px)}}
+@media(max-width:800px){.hero-sahne{width:92vw;top:auto;bottom:2%;opacity:.22}}
+
+/* Dalga ayracı */
+.dalga-bolucu{height:60px;overflow:hidden;line-height:0}
+.dalga-bolucu svg{width:200%;height:60px;animation:kay2 16s linear infinite}
+@keyframes kay2{to{transform:translateX(-50%)}}
+
+/* Kahramanlar kartları */
+.kart-izgara{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem;max-width:1120px;margin:1.5rem auto 0;padding:0 1.25rem}
+.kart{background:var(--yuzey);border:1px solid var(--cizgi);border-top:5px solid var(--renk,var(--cizgi));border-radius:10px;padding:1.25rem 1.25rem 1.5rem;transition:transform .25s,box-shadow .25s}
+.kart:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(22,35,46,.14)}
+.kart-hidro{--renk:var(--hidro)}.kart-ruzgar{--renk:var(--ruzgar)}.kart-toplam{--renk:var(--tr)}
+.kart svg{width:92px;height:92px;display:block;margin-bottom:.5rem}
+.kart h3{margin:.2rem 0;font-family:var(--serif);font-size:1.35rem}
+.kart-sayi{font-family:var(--serif);font-size:2rem;font-weight:700;margin:.2rem 0;color:var(--renk)}
+.kart-aciklama{margin:0;color:var(--murekkep-2);font-size:.98rem}
+.kart-hidro .kart-sayi{color:var(--hidro)}.kart-ruzgar .kart-sayi{color:var(--ruzgar-yazi)}
+
+/* Kaydırınca beliren öğeler (JS çalışmazsa her şey görünür kalır) */
+.js-zengin .gizli{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--gecikme,0ms)}
+.js-zengin .gizli.gorunur{opacity:1;transform:none}
+
+/* Hikâye adımlarına hafif giriş */
+.adim p{transition:transform .5s ease,box-shadow .5s ease}
+.adim.aktif p,.adim.on p,.adim[aria-current="true"] p{transform:translateX(6px)}
+
+@media(prefers-reduced-motion:reduce){
+ .hero h1,.hero .alt-baslik,.hero .kunye,.hero .hero-serit,.pervane,.isinlar,.gunes-nabiz,.dalga-a,.dalga-b,.dalga-bolucu svg{animation:none!important}
+ .js-zengin .gizli{opacity:1;transform:none;transition:none}
+ .kart:hover{transform:none}
+}
