@@ -1,0 +1,6 @@
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+pycountry>=24.6
+babel>=2.14
+jupyter>=1.0

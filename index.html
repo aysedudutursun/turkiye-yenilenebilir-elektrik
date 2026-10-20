@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rüzgâr ve güneş, Türkiye'nin yenilenebilir elektriğini nasıl büyüttü? | Ayşe Dudu Tursun</title>
+  <meta name="description" content="Türkiye'de yenilenebilir elektriğin payı 2000'de %25 iken 2025'te %43'e çıktı. Artışı barajlar değil, rüzgâr ve güneş taşıdı. 2000–2025 verisiyle kaydırarak okunan interaktif bir veri hikâyesi.">
+  <meta name="author" content="Ayşe Dudu Tursun">
+  <meta name="theme-color" content="#F5F7F8">
+  <link rel="canonical" href="https://aysedudutursun.github.io/turkiye-yenilenebilir-elektrik/">
+
+  <!-- Paylaşım önizlemesi (LinkedIn, X, WhatsApp). og:image mutlak adres olmalı. -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Ayşe Dudu Tursun · Veri hikâyeleri">
+  <meta property="og:title" content="Türkiye'nin yenilenebilir elektriğini barajlar değil, rüzgâr ve güneş büyüttü">
+  <meta property="og:description" content="Yenilenebilir payı 2000'de %25'ti, 2025'te %43; aynı yıl rüzgâr ve güneş ilk kez barajları geçti. Kaydırarak okunan interaktif veri hikâyesi.">
+  <meta property="og:url" content="https://aysedudutursun.github.io/turkiye-yenilenebilir-elektrik/">
+  <meta property="og:image" content="https://aysedudutursun.github.io/turkiye-yenilenebilir-elektrik/img/paylasim.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Türkiye'de hidroelektrik ile rüzgâr ve güneşin elektrik üretimindeki payı, 2000–2025. Rüzgâr ve güneş 2025'te ilk kez hidroelektriği geçiyor.">
+  <meta property="article:published_time" content="2026-10-17">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <link rel="preload" href="fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/newsreader-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/d3.ozel.v7.9.0.min.js" defer></script>
+  <script src="js/main.js" type="module"></script>
+</head>
+<body>
+  <a class="atla" href="#icerik">İçeriğe geç</a>
+
+  <header class="hero" id="giris">
+    <div class="hero-ic">
+      <h1>Türkiye'nin yenilenebilir elektriğini barajlar değil, rüzgâr ve güneş büyüttü</h1>
+      <p class="alt-baslik">2000'de elektriğimizin dörtte biri yenilenebilir kaynaklardan geliyordu; 2025'te bu oran %43'e çıktı. Bu sayfa, artışın nereden geldiğini ve Türkiye'nin dünyada nerede durduğunu 26 yıllık veriyle adım adım gösteriyor.</p>
+      <p class="kunye">
+        <span>Yazan: <a href="#yazar">Ayşe Dudu Tursun</a></span>
+        <span>Yayın tarihi: <time datetime="2026-10-17">17 Ekim 2026</time></span>
+      </p>
+
+      <figure class="hero-serit" id="hero-serit">
+        <figcaption class="gorsel-baslik">Elektrik üretiminin kaynaklara göre dağılımı, 2000 ve 2025</figcaption>
+        <div class="grafik" role="img" aria-label="Türkiye'de elektrik üretiminin kaynaklara göre dağılımı. 2000'de üretimin yaklaşık yüzde 25'i yenilenebilir, yüzde 75'i fosil kaynaklıydı. 2025'te yenilenebilir pay yüzde 43'e çıktı ve rüzgârla güneşin payı belirgin biçimde büyüdü."></div>
+        <ul class="lejant" aria-hidden="true"></ul>
+        <p class="kaynak">Kaynak: Our World in Data – Energy (Ember, Energy Institute). Değerler yıllık üretimdeki paydır, %.</p>
+      </figure>
+
+      <a class="kaydir-ipucu" href="#baglam"><span>Hikâyeyi görmek için aşağı kaydırın</span><svg aria-hidden="true" viewBox="0 0 16 16" width="18" height="18"><path d="M8 2v11M3 8.5 8 13.5 13 8.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="metin-bolum" id="baglam" aria-labelledby="baglam-baslik">
+      <h2 id="baglam-baslik">Türkiye 25 yılda neredeyse üç kat fazla elektrik üretir hâle geldi</h2>
+      <p>Elektrik; evlerin, fabrikaların ve giderek araçların ortak enerjisi. Türkiye'nin elektrik üretimi 2000'de <span data-ozet="uretim_2000" data-bicim="twh0">124 TWh</span> iken 2025'te <span data-ozet="uretim_son" data-bicim="twh0">354 TWh</span> oldu. (TWh, yani teravatsaat, bir milyar kilovatsaattir.) Bu kadar hızlı büyüyen bir sistemde artışın hangi kaynaktan karşılandığı; emisyonları, yakıt maliyetlerini ve dışa bağımlılığı belirleyen temel sorulardan biri.</p>
+      <p>Bu çalışmada Our World in Data'nın, Ember ve Energy Institute verilerinden derlediği açık enerji veri setini kullandım. <strong>Yenilenebilir enerji</strong> derken su (hidroelektrik), rüzgâr, güneş, jeotermal ve biyoenerji gibi tükenmeyen kaynakları kastediyorum. Okurken üç sorunun cevabını göreceksiniz: Yenilenebilir payı gerçekten ne kadar arttı? Bu artışı barajlar mı, rüzgâr ve güneş mi sağladı? Türkiye diğer ülkelere göre nerede duruyor?</p>
+
+      <figure class="sekil" id="baglam-grafik">
+        <h3 class="gorsel-baslik">Türkiye'nin elektrik üretimi 2000'den 2025'e <span data-ozet="uretim_kat" data-bicim="kat">2,8</span> katına çıktı</h3>
+        <p class="birim">Yıllık toplam elektrik üretimi, TWh</p>
+        <div class="grafik" role="img" aria-label="Sütun grafik: Türkiye'nin yıllık elektrik üretimi 2000'de 124 TWh, 2025'te 354 TWh. Üretim 2009 ve 2023 gibi birkaç yıl dışında her yıl arttı."></div>
+        <figcaption class="kaynak">Kaynak: Our World in Data – Energy (Ember; Energy Institute, Statistical Review of World Energy).</figcaption>
+      </figure>
+    </section>
+
+    <section class="hikaye" id="hikaye" aria-labelledby="hikaye-baslik">
+      <h2 id="hikaye-baslik" class="gorunmez">Bulgular: yenilenebilir payının kaynakları</h2>
+      <div class="hikaye-duzen">
+        <figure class="yapiskan" id="hikaye-grafik" aria-describedby="hikaye-kaynak">
+          <div class="yapiskan-ic">
+            <h3 class="gorsel-baslik" id="hg-baslik" aria-live="polite">Yenilenebilir payı %25'ten %43'e yükseldi</h3>
+            <p class="birim" id="hg-birim">Elektrik üretiminde yenilenebilir kaynakların payı, %</p>
+            <div class="grafik">
+              <svg id="hg-svg" role="img" aria-labelledby="hg-baslik hg-ozet"><desc id="hg-ozet"></desc></svg>
+            </div>
+            <figcaption class="kaynak" id="hikaye-kaynak">Kaynak: Our World in Data – Energy (Ember, Energy Institute). <span id="hg-not"></span></figcaption>
+          </div>
+        </figure>
+
+        <div class="adimlar">
+          <div class="adim" data-adim="0" data-vurgu="tr">
+            <p>2000 yılında Türkiye'de üretilen her dört kilovatsaat elektrikten yaklaşık biri yenilenebilir kaynaklardan geliyordu. 2025'te bu oran <strong>%43</strong>'e çıktı: artık her beş kilovatsaatten ikisinden fazlası.</p>
+          </div>
+          <div class="adim" data-adim="1" data-vurgu="tr">
+            <p>Ama çizgi düz yükselmiyor; bazı yıllar 10 puana yakın düşüyor. Tek bir yıla takılmamak için <strong>üç yıllık ortalamaya</strong> baktım: her yılın değeri, kendisi ve önceki iki yılın ortalaması. Böyle bakınca pay <span data-ozet="ren_ort_bas" data-bicim="pct">%23,8</span>'den <span data-ozet="ren_ort_son" data-bicim="pct">%43,6</span>'ya, yaklaşık 1,8 katına çıktı.</p>
+          </div>
+          <div class="adim" data-adim="2" data-vurgu="hidro">
+            <p>Bu payı hangi kaynaklar oluşturuyor? 2000'de yenilenebilir elektriğin neredeyse tamamı <strong>barajlardan</strong>, yani hidroelektrik santrallerinden geliyordu. Rüzgâr ve güneş henüz yok denecek kadar azdı.</p>
+          </div>
+          <div class="adim" data-adim="3" data-vurgu="hidro">
+            <p>Hidroelektrik, yağışa ve baraj doluluğuna bağlı olduğu için yıldan yıla inip kalkıyor: 2008, 2014, 2021 ve 2025 en düşük yıllar. Üç yıllık ortalamada barajların payı <span data-ozet="hidro_ort_bas" data-bicim="pct">%23,6</span>'dan <span data-ozet="hidro_ort_son" data-bicim="pct">%19,3</span>'e <strong>geriledi</strong>.</p>
+          </div>
+          <div class="adim" data-adim="4" data-vurgu="ruzgar">
+            <p>Boşluğu <strong>rüzgâr ve güneş</strong> doldurdu. İkisinin toplam payı 2010'da %2'nin altındaydı; 2025'te <span data-ozet="ws_son" data-bicim="pct">%21,7</span>'ye ulaştı ve ilk kez hidroelektriği (<span data-ozet="hidro_son" data-bicim="pct">%16,2</span>) geçti. 2025'in barajlar için zayıf bir yıl olduğunu da not edelim.</p>
+          </div>
+          <div class="adim" data-adim="5" data-vurgu="ruzgar">
+            <p>Pay yerine <strong>üretim miktarına</strong> bakınca her kaynağın büyüdüğü görülüyor; barajlar bile üretimini iki katından fazlasına çıkardı. Yine de 2000–2002 ile 2023–2025 arasındaki artışın <span data-ozet="ws_twh_oran" data-bicim="oran0">%54</span>'ünü rüzgâr ve güneş karşıladı.</p>
+          </div>
+          <div class="adim" data-adim="6" data-vurgu="ruzgar">
+            <p>Aynı dönemde toplam üretim 2,7 katına çıktı; barajlar bu hıza yetişemedi. Yenilenebilir payındaki <span data-ozet="ren_net" data-bicim="puan">19,8 puanlık</span> net artışın <span data-ozet="ws_pp" data-bicim="puan">18,7 puanı</span> rüzgâr ve güneşten geldi. (Puan: iki yüzde arasındaki fark.)</p>
+          </div>
+          <div class="adim" data-adim="7" data-vurgu="tr">
+            <p>Türkiye'nin 2024'teki <span data-ozet="tr_ren_2024" data-bicim="pct">%45,6</span>'lık payı dünya ortalamasının (<span data-ozet="dunya_ren_2024" data-bicim="pct">%31,9</span>) belirgin biçimde üstünde, AB'nin (<span data-ozet="ab_ren_2024" data-bicim="pct">%48,0</span>) biraz altında. 19 G20 ülkesi içinde <strong>6. sırada</strong>; 2000'den bu yana en çok artış gösteren 5. ülke.</p>
+          </div>
+          <div class="adim" data-adim="8" data-vurgu="tr">
+            <p>Yalnızca rüzgâr ve güneşe bakınca Türkiye (<span data-ozet="tr_ws_2024" data-bicim="pct">%18,2</span>) Çin'le aynı düzeyde, dünya ortalamasının üstünde. Ama Almanya, Birleşik Krallık ve AB ortalaması (<span data-ozet="ab_ws_2024" data-bicim="pct">%28,8</span>) çok daha ileride: asıl yarış burada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kesif" id="kesif" aria-labelledby="kesif-baslik">
+      <div class="metin-bolum">
+        <h2 id="kesif-baslik">Sıra sizde: Türkiye'yi istediğiniz ülkeyle karşılaştırın</h2>
+        <p>Göstergeyi değiştirin, ülke ekleyin ya da başlangıç yılını kaydırın. İki grafik birlikte güncellenir. Dağılım grafiğindeki bir noktaya tıklayarak da o ülkeyi çizgi grafiğe ekleyebilirsiniz.</p>
+      </div>
+
+      <form class="kontroller" id="kontroller" aria-label="Keşif grafiği kontrolleri" onsubmit="return false">
+        <div class="kontrol">
+          <label for="metrik">Gösterge</label>
+          <select id="metrik">
+            <option value="yenilenebilir">Yenilenebilir toplam</option>
+            <option value="hidro">Hidroelektrik</option>
+            <option value="ruzgar">Rüzgâr</option>
+            <option value="gunes">Güneş</option>
+            <option value="ruzgar_gunes">Rüzgâr ve güneş</option>
+          </select>
+        </div>
+        <div class="kontrol kontrol-genis">
+          <label for="ulke-ara">Ülke ekle (en fazla 4)</label>
+          <div class="arama-satir">
+            <input id="ulke-ara" list="ulke-listesi" autocomplete="off" placeholder="Ülke adı yazın, ör. Yunanistan" aria-describedby="arama-durum">
+            <button type="button" id="ulke-ekle">Ekle</button>
+          </div>
+          <datalist id="ulke-listesi"></datalist>
+          <p class="durum" id="arama-durum" aria-live="polite"></p>
+        </div>
+        <div class="kontrol">
+          <label for="baslangic">Başlangıç yılı: <output id="baslangic-deger" for="baslangic">2000</output></label>
+          <input type="range" id="baslangic" min="2000" max="2020" step="1" value="2000">
+        </div>
+        <div class="kontrol kontrol-dar">
+          <button type="button" id="sifirla" class="ikincil">Başa döndür</button>
+        </div>
+      </form>
+      <ul class="secili" id="secili" aria-label="Grafikteki ülkeler"></ul>
+
+      <div class="kesif-grafikler">
+        <figure class="sekil" id="kesif-cizgi">
+          <h3 class="gorsel-baslik" aria-live="polite"></h3>
+          <p class="birim"></p>
+          <div class="grafik"></div>
+          <figcaption class="kaynak">Kaynak: Our World in Data – Energy (Ember, Energy Institute). Türkiye her zaman kırmızı çizgiyle gösterilir; diğer ülkeler çizgi desenleri ve etiketleriyle ayrılır.</figcaption>
+        </figure>
+        <figure class="sekil" id="kesif-dagilim">
+          <h3 class="gorsel-baslik" aria-live="polite"></h3>
+          <p class="birim"></p>
+          <div class="grafik"></div>
+          <figcaption class="kaynak">Kaynak: Our World in Data – Energy. Yalnızca 2024'te en az 10 TWh elektrik üreten ülkeler. Çapraz çizgi "değişim yok" anlamına gelir; üstündeki ülkeler payını artırdı.</figcaption>
+        </figure>
+      </div>
+      <div class="ipucu-kutu" id="ipucu" role="status" hidden></div>
+    </section>
+
+    <section class="metin-bolum" id="sonuc" aria-labelledby="sonuc-baslik">
+      <h2 id="sonuc-baslik">Yenilenebilir payının motoru artık rüzgâr ve güneş; barajlar ise dalgalı bir taban</h2>
+      <p><strong>Peki ne olmuş?</strong> Türkiye'nin yenilenebilir elektrikteki ilerlemesi artık tek bir kaynağa yaslanmıyor. Hidroelektrik hâlâ en büyük yenilenebilir kaynak, ama hem yağışa bağlı hem de talep artışına yetişemiyor. Payın kalıcı biçimde yükselmesi, hava koşullarından yıl yıl daha az etkilenen bir karışıma, yani rüzgâr ve güneşin büyümeyi sürdürmesine bağlı görünüyor. Barajlar için zayıf geçen 2025'te bile payın %43'te kalması bu dönüşümün işareti. Ülke karşılaştırması da aynı yere işaret ediyor: Türkiye toplam payda G20'nin üst sıralarında, ama rüzgâr ve güneşte Avrupa'nın öncülerinin gerisinde.</p>
+      <!-- [İYİLEŞTİR-4] Hidroelektrik–yağış ilişkisini MGM/TÜİK yağış verisiyle destekle. Ayrıntı: AYSE_ICIN_YAPILACAKLAR.md -->
+      <p><strong>Sınırlılıklar ve açık sorular.</strong> Bu çalışma neyin değiştiğini gösteriyor, nedenini değil: teşviklerin, yenilenebilir enerji ihalelerinin ya da maliyet düşüşlerinin etkisi bu veriyle ölçülemez. Hidroelektrikteki düşüşlerin yağışla ilişkisini de doğrudan test etmedim. Ayrıca payın artması fosil üretimin azaldığı anlamına gelmiyor: talep büyüdükçe kömür ve gazdan üretilen elektrik de <span data-ozet="fosil_twh_bas" data-bicim="twh0">95 TWh</span>'den <span data-ozet="fosil_twh_son" data-bicim="twh0">191 TWh</span>'ye, yani iki katına çıktı. Açık kalan soru şu: Rüzgâr ve güneş, talep artışını tek başına karşılayacak hızda büyüyebilecek mi?</p>
+    </section>
+
+    <section class="metin-bolum yontem" id="yontem" aria-labelledby="yontem-baslik">
+      <h2 id="yontem-baslik">Yöntem</h2>
+      <h3>Veri kaynağı</h3>
+      <p><a href="https://github.com/owid/energy-data">Our World in Data – Energy Dataset</a> (<code>owid-energy-data.csv</code>). OWID bu veriyi Ember (Yearly Electricity Data, 2026), Energy Institute (Statistical Review of World Energy, 2025) ve ABD Enerji Bilgi İdaresi (EIA) kaynaklarından derler. Lisans: <a href="https://creativecommons.org/licenses/by/4.0/deed.tr">CC BY 4.0</a>. Erişim tarihi: 17 Ekim 2026. Ham verinin bu tarihteki kopyası GitHub deposunda saklanıyor.</p>
+      <h3>Temizleme adımları</h3>
+      <ol>
+        <li>130 sütundan elektrik üretimiyle ilgili 20 sütun seçildi; dönem 2000–2025 ile sınırlandı.</li>
+        <li>Ülkeler ile bölge toplamları ayrıldı. Sıralamalarda yalnızca ülkeler kullanıldı; Dünya, AB-27, Avrupa, G20 ve OECD toplamları karşılaştırma çizgisi olarak tutuldu.</li>
+        <li>Türkiye serisinde eksik değer yok. Yenilenebilir payının alt kaynakların toplamına eşit olduğu tüm ülkeler için kontrol edildi (0,1 puandan büyük fark yok).</li>
+        <li>Hidroelektrikteki %20–32'lik yıllık düşüşler aykırı değer gibi görünse de gerçek üretim dalgalanmasıdır; satır çıkarılmadı.</li>
+        <li>Ülke adları ISO kodlarından Türkçeye çevrildi.</li>
+        <li>Site için 5 özet dosya üretildi (toplam yaklaşık 125 KB); grafiklerdeki ve metindeki sayılar bu dosyalardan okunur.</li>
+      </ol>
+      <h3>Varsayımlar</h3>
+      <ul>
+        <li>Dönem başı ve sonu, tek bir yılın kuraklığı sonucu çarpıtmasın diye <strong>üç yıllık ortalamalarla</strong> karşılaştırıldı: 2000–2002 ve 2023–2025.</li>
+        <li>2025 verisi tüm ülkeler için henüz yayımlanmadığından ülke karşılaştırmaları <strong>2024</strong> yılıyla yapıldı.</li>
+        <li>Çok küçük sistemlerde pay sert oynadığı için sıralamalar ve dağılım grafiği yıllık üretimi <strong>en az 10 TWh</strong> olan ülkelerle sınırlandı.</li>
+        <li>"Jeotermal ve biyoenerji", veri setindeki "diğer yenilenebilir" kategorisidir (biyoenerji dahil).</li>
+        <li>Paylar <strong>üretime</strong> göredir; elektrik ithalatı ve ihracatı hesaba katılmadı.</li>
+      </ul>
+      <h3>Araçlar</h3>
+      <p>Analiz: Python (pandas, NumPy, Matplotlib, pycountry, Babel) ve Jupyter. Site: HTML, CSS ve JavaScript; grafikler ve geçiş animasyonları <a href="https://d3js.org">D3.js v7</a> ile elle yazıldı; kaydırma adımları saf JavaScript ile (Intersection Observer API ve kaydırma konumu hesabı) yönetiliyor; hazır bir kaydırma kütüphanesi kullanılmadı. Yazı tipleri: Newsreader ve Public Sans (SIL Open Font License). Yayın: GitHub Pages.</p>
+      <p>
+        <a href="https://github.com/aysedudutursun/turkiye-yenilenebilir-elektrik/blob/main/notebooks/analiz.ipynb">Analiz notebook'u</a> ·
+        <a href="https://github.com/aysedudutursun/turkiye-yenilenebilir-elektrik">GitHub deposu</a>
+      </p>
+      <h3>Yapay zekâ kullanım beyanı</h3>
+      <!-- [İYİLEŞTİR-1] Bu beyan, projede yapay zekâyı GERÇEKTE nasıl kullandığını yansıtmalı. Ayrıntı: AYSE_ICIN_YAPILACAKLAR.md -->
+      <p>Bu projede Anthropic'in Claude adlı yapay zekâ asistanını kullandım: D3.js grafik kodunun ve kaydırma mekanizmasının yazımında, notebook'un iskeletinin kurulmasında, hata ayıklamada ve sayfadaki metinlerin ilk taslaklarında. Veri setini ve çalışma sorusunu kendim seçtim; analizdeki her sayıyı notebook çıktısıyla karşılaştırarak kontrol ettim ve metinleri gözden geçirip düzenledim.</p>
+    </section>
+
+    <section class="metin-bolum yazar" id="yazar" aria-labelledby="yazar-baslik">
+      <h2 id="yazar-baslik">Yazar</h2>
+      <!-- [İYİLEŞTİR-2] Kısa tanıtımı kendi cümlelerinle kişiselleştir; istersen fotoğraf ekle. -->
+      <p><strong>Ayşe Dudu Tursun.</strong> Veriyi temizlemekten, ondan anlaşılır bir hikâye çıkarmaktan ve bunu herkesin okuyabileceği arayüzlere dönüştürmekten keyif alan bir öğrenciyim. Bu proje, Kullanıcı Arayüzü Tasarımı dersi için hazırladığım veri hikâyesi çalışmasıdır.</p>
+      <ul class="baglantilar">
+        <li><a href="https://aysedudutursun.github.io">Portfolyoma dön</a></li>
+        <li><a href="https://www.linkedin.com/in/aysedudutursun/">LinkedIn</a></li>
+        <li><a href="https://github.com/aysedudutursun">GitHub</a></li>
+        <li><a href="mailto:aysedudutursun@gmail.com">E-posta</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="altbilgi">
+    <p>Veri: Our World in Data – Energy (CC BY 4.0). Metin ve grafikler: Ayşe Dudu Tursun, 2026.</p>
+  </footer>
+  <noscript><p class="noscript">Grafikler JavaScript ile çiziliyor. Metni okuyabilirsiniz; grafikleri görmek için JavaScript'i açın.</p></noscript>
+</body>
+</html>
