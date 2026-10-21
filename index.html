@@ -73,6 +73,7 @@
       <a class="kaydir-ipucu" href="#baglam"><span>Hikâyeyi görmek için aşağı kaydırın</span><svg aria-hidden="true" viewBox="0 0 16 16" width="18" height="18"><path d="M8 2v11M3 8.5 8 13.5 13 8.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
     </div>
   </header>
+<div class="manzara" role="img" aria-label="Süsleme çizimi: rüzgâr türbinleri, güneş paneli tarlası ve baraj olan bir manzara."><svg id="manzara-svg" viewBox="0 0 1200 330" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg><p class="manzara-yazi">Hikâyenin üç kaynağı: su, rüzgâr ve güneş</p></div>
 <div class="dalga-bolucu" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0 30 Q75 0 150 30 T300 30 T450 30 T600 30 T750 30 T900 30 T1050 30 T1200 30 V60 H0Z" fill="#0072B2" opacity=".14"/><path d="M0 40 Q75 14 150 40 T300 40 T450 40 T600 40 T750 40 T900 40 T1050 40 T1200 40 V60 H0Z" fill="#009E73" opacity=".14"/></svg></div>
 
   <main id="icerik">
@@ -102,6 +103,18 @@
 <article class="kart kart-toplam"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 78 A38 38 0 1 1 80 78" fill="none" stroke="#E2E7EA" stroke-width="10" stroke-linecap="round"/><path d="M20 78 A38 38 0 0 1 72 24" fill="none" stroke="#C8102E" stroke-width="10" stroke-linecap="round"/><path d="M46 30 L38 54 L50 54 L44 74 L64 46 L52 46 L58 30Z" fill="#16232E"/></svg>
 <h3>Toplam yenilenebilir pay</h3><p class="kart-sayi"><span data-say="ren_pay_2000" data-on="%"></span> → <span data-say="ren_pay_son" data-on="%"></span></p>
 <p class="kart-aciklama">Türkiye'nin elektriğinde yenilenebilir kaynakların payı 2000'den 2025'e.</p></article>
+</div></section>
+
+<section class="sahadan" id="sahadan" aria-labelledby="sahadan-baslik">
+<div class="metin-bolum"><h2 id="sahadan-baslik">Rakamların arkasındaki tesisler</h2>
+<p>Grafiklerdeki her çizgi, gerçekte bir baraj, bir rüzgâr santrali ya da bir güneş tarlası. Üç kaynağı yakından görelim.</p></div>
+<div class="foto-izgara">
+<figure class="foto foto-hidro"><div class="cerceve"><img src="img/hidro.webp" width="450" height="338" loading="lazy" decoding="async" alt="Kapakları açık bir baraj gövdesi: sağ taraftan köpürerek akan su, arkada göl ve kurak tepeler."></div>
+<figcaption><strong>Barajlar</strong>Hidroelektriğin payı %<span data-say="hidro_ort_bas"></span> seviyesinden %<span data-say="hidro_ort_son"></span> seviyesine geriledi (üç yıllık ortalama).<span class="kredi">Örnek baraj görseli. Fotoğraf: Unsplash</span></figcaption></figure>
+<figure class="foto foto-ruzgar"><div class="cerceve"><img src="img/ruzgar.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Masmavi gökyüzünde dalgalanan Türk bayrağı ve sol altta dönen bir rüzgâr türbini."></div>
+<figcaption><strong>Rüzgâr</strong>2000'de neredeyse sıfır olan rüzgâr, güneşle birlikte yenilenebilir payını <span data-say="ws_pp" data-on="+" data-son=" puan"></span> artırdı.<span class="kredi">Fotoğraf: Izafi, Pexels</span></figcaption></figure>
+<figure class="foto foto-gunes"><div class="cerceve"><img src="img/gunes.webp" width="627" height="470" loading="lazy" decoding="async" alt="Gün batımında, sıra sıra güneş panellerinin ardında ufukta dizilmiş rüzgâr türbinleri."></div>
+<figcaption><strong>Güneş</strong>Rüzgâr ve güneş birlikte 2025'te elektriğin %<span data-say="ws_son"></span> kadarını üretti.<span class="kredi">Örnek görsel (bilgisayar çizimi olabilir). Unsplash+</span></figcaption></figure>
 </div></section>
 
 <section class="hikaye" id="hikaye" aria-labelledby="hikaye-baslik">
@@ -150,7 +163,15 @@
       </div>
     </section>
 
-    <section class="kesif" id="kesif" aria-labelledby="kesif-baslik">
+    <section class="yaris" id="yaris" aria-labelledby="yaris-baslik">
+<div class="metin-bolum"><h2 id="yaris-baslik">G20'de sıralama nasıl değişti?</h2>
+<p>Her çubuk bir G20 ülkesinin elektriğinde yenilenebilir payı. Oynat'a basın ya da kaydırıcıyı elle çekin: 2000'deki sıralamanın 2024'e nasıl dönüştüğünü izleyin. Türkiye kırmızıyla işaretli.</p>
+<div class="kontrol-satir"><button class="dugme" id="oynat" type="button">▶ 2000'den 2024'e oynat</button>
+<input type="range" id="kaydirici" min="0" max="100" value="0" aria-label="Zaman: 2000'den 2024'e"></div></div>
+<figure class="sekil"><svg id="yarisSvg" role="img" aria-label="Çubuk grafik: G20 ülkelerinin yenilenebilir payı."></svg>
+<figcaption class="kaynak">Kaynak: Our World in Data – Energy (Ember, Energy Institute). Aradaki değerler, 2000 ve 2024 değerleri arasında doğrusal ara değerlemedir; gerçek yıllık veri değildir.</figcaption></figure></section>
+
+<section class="kesif" id="kesif" aria-labelledby="kesif-baslik">
       <div class="metin-bolum">
         <h2 id="kesif-baslik">Sıra sizde: Türkiye'yi istediğiniz ülkeyle karşılaştırın</h2>
         <p>Göstergeyi değiştirin, ülke ekleyin ya da başlangıç yılını kaydırın. İki grafik birlikte güncellenir. Dağılım grafiğindeki bir noktaya tıklayarak da o ülkeyi çizgi grafiğe ekleyebilirsiniz.</p>
